@@ -1,0 +1,62 @@
+{
+  "hash": "9ea5364c",
+  "configHash": "eb6d5b63",
+  "lockfileHash": "56e191ce",
+  "browserHash": "531c2f3e",
+  "optimized": {
+    "d3-geo": {
+      "src": "../../node_modules/d3-geo/src/index.js",
+      "file": "d3-geo.js",
+      "fileHash": "a3e7af51",
+      "needsInterop": false
+    },
+    "driver.js": {
+      "src": "../../node_modules/driver.js/dist/driver.js.mjs",
+      "file": "driver__js.js",
+      "fileHash": "3f362ce4",
+      "needsInterop": false
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "e4fe5d68",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "f20c5cbd",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "077248f2",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "7fa8bac8",
+      "needsInterop": true
+    },
+    "topojson-client": {
+      "src": "../../node_modules/topojson-client/src/index.js",
+      "file": "topojson-client.js",
+      "fileHash": "5c8d4ae3",
+      "needsInterop": false
+    },
+    "zustand": {
+      "src": "../../node_modules/zustand/esm/index.mjs",
+      "file": "zustand.js",
+      "fileHash": "10382711",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "react-TUYU05Ph": {
+      "file": "react-TUYU05Ph.js",
+      "isDynamicEntry": false
+    }
+  }
+}

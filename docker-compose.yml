@@ -1,0 +1,61 @@
+name: xai-iml-26
+
+services:
+  frontend:
+    image: frontend:latest
+    build:
+      context: ./frontend/
+      dockerfile: ./Dockerfile
+      target: base
+    volumes:
+      - ./frontend/vite:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    image: backend:latest
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+      target: base
+    volumes:
+      - ./backend/src:/usr/src/app
+      - ./backend/assets:/usr/src/app/assets:ro
+      - ./mockup/data_sources:/data_sources:ro
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+      AMLWORLD_CSV_PATH: /data_sources/ibm_transactions_for_aml.csv
+      BANK_MAPPING_CSV_PATH: /data_sources/bank_id_mapping.csv
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  microservice:
+    image: microservice:latest
+    build:
+      context: ./microservice/
+      dockerfile: ./Dockerfile
+      target: base
+    volumes:
+      - ./microservice/src:/usr/src/app
+    ports:
+      - "8081:8081"
+
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres-data-milestone3:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres-data:
+  postgres-data-milestone3:

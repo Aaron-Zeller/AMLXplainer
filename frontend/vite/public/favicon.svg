@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="shieldBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18221D"/>
+      <stop offset="100%" stop-color="#18221D"/>
+    </linearGradient>
+
+    <linearGradient id="alertColor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FE0D57"/>
+      <stop offset="100%" stop-color="#6363B9"/>
+    </linearGradient>
+  </defs>
+  <path d="M256 32 L48 104 V240 C48 384 136 472 256 504 C376 472 464 384 464 240 V104 Z" fill="url(#shieldBase)" />
+
+  <!-- <circle cx="256" cy="270" r="170" fill="none" stroke="#708EA3" stroke-width="20" /> -->
+
+  <rect x="220" y="120" width="72" height="200" rx="36" fill="url(#alertColor)" />
+  <circle cx="256" cy="380" r="40" fill="#2F7ED9" />
+</svg>
